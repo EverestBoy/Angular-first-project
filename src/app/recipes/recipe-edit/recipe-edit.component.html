@@ -1,0 +1,49 @@
+<h2>Edit Recipe: {{recipe.name}} </h2>
+<br><br>
+<div class="row">
+  <div class="col-xs-12">
+
+    <div class="row">
+      <div class="col-xs-2">Name :</div>
+      <div class="col-xs-10">
+        <input
+          type="text"
+          class="form-control"
+          value = "{{recipe.name}}"
+          #nameInput>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-2">Description :</div>
+      <div class="col-xs-10">
+        <input
+          type="text"
+          class="form-control"
+          value = "{{recipe.description}}"
+          #descriptionInput>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-2">Imagepath :</div>
+      <div class="col-xs-10">
+        <input
+          type="text"
+          class="form-control"
+          value = "{{recipe.imagepath}}"
+          #imageInput>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-xs-12">
+          <button class="btn btn-success" (click) = "onEditClicked()"  style = "margin: 0 auto;">Edit recipe</button> &nbsp;
+          <button class="btn btn-danger" (click) = "onCancelClicked()" style = "margin: 0 auto;">Cancel</button>
+
+
+    </div>
+
+
+  </div>
+</div>

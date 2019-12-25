@@ -1,0 +1,37 @@
+
+<div class="row">
+    <div class="col-xs-10">
+        <app-shopping-edit
+        (insertShopping) = "addNewShoppingItem($event)"></app-shopping-edit>
+        <hr>
+        <ul class="list-group">
+            <a
+                class="list-group-item"
+                style="cursor: pointer"
+                *ngFor = "let ingredient of ingredients"
+            >
+
+            <div class="row">
+                <div class="col-md-10">
+                    {{ingredient.name}} ({{ingredient.amount}})
+                </div>
+                <div class="col-md-2">
+                   <img
+                        src="assets/delete_icon.png"
+                        alt=""
+                        (click)= "deleteItem(ingredient.name)"
+                        class="pull-right img-responsive"
+                        style="max-height: 32px">
+                </div>
+            </div>
+
+
+
+            </a>
+
+
+        </ul>
+    </div>
+
+
+</div>

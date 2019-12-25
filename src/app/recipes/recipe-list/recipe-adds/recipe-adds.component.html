@@ -1,0 +1,36 @@
+
+<div class="row" >
+    <div class="col-xs-12">
+
+        <input 
+            type="text" 
+            class="form-control"
+            placeholder="Enter recipe name!"
+            #nameInput>
+        <input 
+            type="text" 
+            class="form-control"
+            placeholder="Enter recipe description!"
+            #descriptionInput>
+        
+        <input 
+            type="text" 
+            class="form-control"
+            placeholder="Enter recipe image!"
+            #imageInput>
+
+        <br>
+
+        <div class="row">
+            <div class="col-xs-12" style="text-align: center;">
+                <button class="btn btn-success" (click) = "onAddClicked()">Add Recipe</button>
+                &nbsp;
+                <button class="btn btn-danger" (click) = "onCancelClicked()">Cancel</button>
+            </div>
+        </div>
+        
+        
+
+    </div>
+</div>
+

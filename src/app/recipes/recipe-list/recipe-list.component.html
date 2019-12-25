@@ -1,0 +1,29 @@
+<app-recipe-adds
+    *ngIf = "addItemOpen == true"
+    (cancel) = "onCancelClicked()"
+    (insertRecipe) = "onItemInserted($event)">
+</app-recipe-adds>
+<div class="row" *ngIf = "addItemOpen == false">
+    <div class="col-xs-12">
+        <button
+            class="btn btn-success"
+            (click) = "openAddItem()"
+        >New Recipe</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row" >
+    <div class="col-xs-12">
+
+
+        <app-receipe-item
+            *ngFor="let recipe of  receipes; let i = index"
+            [index] = "i"
+            [recipeItem] = "recipe"
+        ></app-receipe-item>
+
+    </div>
+</div>
+<br>
